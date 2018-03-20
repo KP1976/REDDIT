@@ -1,0 +1,71 @@
+.search-result {
+  background: $nav-background-color;
+  border: 1px solid $grey;
+  border-radius: .25rem;
+  display: none;
+  margin-top: 2rem;
+  max-width: 50rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+.visible {
+  display: grid;
+}
+
+.search-result-title {
+  margin-bottom: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.post-box {
+  background: $white;
+  border: 1px solid $grey;
+  border-radius: .25rem;
+  padding: 1rem;
+}
+
+.post-img {
+  border-radius: .25rem;
+  width: 100%;
+}
+
+.post-title {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+.post-text {
+  margin-bottom: 1rem;
+}
+
+.btn-post-link {
+  background: $nav-background-color;
+  border-radius: .25rem;
+  color: $black;
+  display: block;
+  font-weight: bold;
+  padding: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+}
+
+.badge-subreddit,
+.badge-score {
+  border-radius: .25rem;
+  display: inline-block;
+  font-size: .75rem;
+  font-weight: bold;
+  padding: .25rem .5rem;
+}
+
+.badge-subreddit {
+  background: $nav-background-color;
+  margin-bottom: .5rem;
+}
+
+.badge-score {
+  background: $main-background-color;
+}

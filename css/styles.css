@@ -1,0 +1,218 @@
+:root {
+  --primary-color: #78e3fd;
+  --secondary-color: #d1f5ff;
+  --white: #eef8ff;
+  --black: #333;
+  --grey: #aaa;
+  --font: 'Open Sans', sans-serif;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: var(--font);
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--white);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--grey);
+  height: 0;
+  margin: 1rem 0;
+}
+
+.nav-wrapper {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: var(--primary-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 4rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.nav-wrapper .title {
+  color: var(--black);
+}
+
+.container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: var(--secondary-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: calc(100vh - 4rem);
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.alert {
+  background: red;
+  border-radius: .25rem;
+  color: var(--white);
+  margin-bottom: 1rem;
+  padding: .3rem 0;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.box {
+  background: var(--white);
+  border: 1px solid var(--grey);
+  border-radius: .25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 50rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+.box-title {
+  margin-bottom: 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.search-wrapper,
+.sort-wrapper,
+.limit-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.search-label,
+.sort-title,
+.limit-label {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.search-input,
+.limit-select {
+  border: 1px solid var(--grey);
+  border-radius: .25rem;
+  font-size: 1rem;
+  outline-color: var(--secondary-color);
+  padding: 0.5rem;
+}
+
+.sort-inputs-wrapper {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: grid;
+  grid-template-columns: 165px 13px;
+}
+
+.btn-search {
+  border: none;
+  border-radius: .25rem;
+  background: var(--primary-color);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  text-transform: uppercase;
+}
+
+.search-result {
+  background: var(--primary-color);
+  border: 1px solid var(--grey);
+  border-radius: .25rem;
+  display: none;
+  margin-top: 2rem;
+  max-width: 50rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+.visible {
+  display: grid;
+}
+
+.search-result-title {
+  margin-bottom: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.post-box {
+  background: var(--white);
+  border: 1px solid var(--grey);
+  border-radius: .25rem;
+  padding: 1rem;
+}
+
+.post-img {
+  border-radius: .25rem;
+  width: 100%;
+}
+
+.post-title {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+.post-text {
+  margin-bottom: 1rem;
+}
+
+.btn-post-link {
+  background: var(--primary-color);
+  border-radius: .25rem;
+  color: var(--black);
+  display: block;
+  font-weight: bold;
+  padding: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+}
+
+.badge-subreddit,
+.badge-score {
+  border-radius: .25rem;
+  display: inline-block;
+  font-size: .75rem;
+  font-weight: bold;
+  padding: .25rem .5rem;
+}
+
+.badge-subreddit {
+  background: var(--primary-color);
+  margin-bottom: .5rem;
+}
+
+.badge-score {
+  background: var(--secondary-color);
+}
