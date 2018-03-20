@@ -28,6 +28,9 @@ const App = (_=> {
 
     // KLIKNIĘCIE W PRZYCISK SZUKAJ
     vars.searchForm.addEventListener('submit', e => {
+      // CZYSZCZENIE REZULTATÓW PRZED KAŻDYM WCIŚNIĘCIEM KLAWISZA SZUKAJ
+      vars.searchResult.innerHTML = '<h2 class="search-result-title">Wyniki</h2>';
+
       // POBIERAMY DO ZMIENNEJ WARTOŚĆ Z INPUTA, KTÓRY JEST NAZWĄ POSTA
       const postNameFromInput = vars.searchInput.value;
       
@@ -50,30 +53,31 @@ const App = (_=> {
       .then(data => {
         let resultHTML = '';
 
+        console.log(data);
+
         data.forEach(post => {
-          // SPRAWDZANIE CZY JEST OBRAZ< JAK NIE TO DAJ IKONĘ REDDIT
+          // SPRAWDZANIE CZY JEST OBRAZ. JAK NIE TO DAJ IKONĘ REDDIT
           const image = post.preview ? 
           post.preview.images[0].source.url : 
           'https://upload.wikimedia.org/wikipedia/en/8/82/Reddit_logo_and_wordmark.svg';
-
           
           resultHTML += `
           <div class="post-box">
             <img src="${image}" alt="" class="post-img">
-            <h4 class="post-title">Burger King used "It" to throw major shade at McDonalds.</h4>
-            <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, amet eaque tempore corporis in veniam ex. Doloribus quidem velit nobis.</p>
-            <a href="" class="btn-post-link" target="_blank">Więcej</a>
+            <h4 class="post-title">${post.title}</h4>
+            <p class="post-text">${post.selftext}</p>
+            <a href="${post.url}" class="btn-post-link" target="_blank">Więcej</a>
             <hr>
-            <div class="badge-subreddit">Subreddit: funny</div>
-            <div class="badge-score">Score: 76315</div>
+            <div class="badge-subreddit">Subreddit: ${post.subreddit}</div>
+            <div class="badge-score">Punkty: ${post.score}</div>
+            <hr>
+            <span>Autor: <strong>${post.author}</strong></span>
           </div>
           `;
         });
         
-        console.log(resultHTML);
-
         vars.searchResult.insertAdjacentHTML('beforeend', resultHTML);
-        
+
       });
 
       e.preventDefault();

@@ -7,23 +7,47 @@
   max-width: 50rem;
   padding: 1rem;
   width: 100%;
+  @media (min-width: 960px) {
+    max-width: 80rem;
+  }
 }
 
 .visible {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 640px) {
+    display: grid;
+    grid-auto-columns: auto;
+    grid-template-columns: auto auto;
+    grid-gap: 1rem;
+  }
+  @media (min-width: 960px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .search-result-title {
   margin-bottom: 1rem;
   text-align: center;
   text-transform: uppercase;
+  @media (min-width: 640px) {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+  }
 }
 
 .post-box {
   background: $white;
   border: 1px solid $grey;
   border-radius: .25rem;
+  margin-bottom: 1rem;
   padding: 1rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @media (min-width: 640px) {
+    margin-bottom: 0;
+  }
 }
 
 .post-img {
