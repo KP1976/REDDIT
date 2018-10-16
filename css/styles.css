@@ -149,7 +149,7 @@ hr {
 .search-result {
   background: var(--primary-color);
   border: 1px solid var(--grey);
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   display: none;
   margin-top: 2rem;
   max-width: 50rem;
@@ -175,13 +175,13 @@ hr {
   .visible {
     display: grid;
     grid-auto-columns: auto;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
     grid-gap: 1rem;
   }
 }
 @media (min-width: 960px) {
   .visible {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
   }
 }
 
@@ -200,7 +200,7 @@ hr {
 .post-box {
   background: var(--white);
   border: 1px solid var(--grey);
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   margin-bottom: 1rem;
   padding: 1rem;
 }
@@ -214,7 +214,7 @@ hr {
 }
 
 .post-img {
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   width: 100%;
 }
 
@@ -229,7 +229,7 @@ hr {
 
 .btn-post-link {
   background: var(--primary-color);
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   color: var(--black);
   display: block;
   font-weight: bold;
@@ -241,16 +241,16 @@ hr {
 
 .badge-subreddit,
 .badge-score {
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   display: inline-block;
-  font-size: .75rem;
+  font-size: 0.75rem;
   font-weight: bold;
-  padding: .25rem .5rem;
+  padding: 0.25rem 0.5rem;
 }
 
 .badge-subreddit {
   background: var(--primary-color);
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .badge-score {
